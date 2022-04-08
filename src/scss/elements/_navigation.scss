@@ -1,0 +1,32 @@
+.navigation {
+  height: 80px;
+  background-color: black;
+  color: white;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navigation__logo {
+      width: 100px;
+    }
+  }
+}
+
+.navigation__search {
+
+  input {
+    height: 2em;
+    border: 5px;
+    border-radius: 10px;
+    margin-right:0.3em;
+    background-color:white;
+  }
+  button{
+    height: 2.4em;
+    padding: 5px;
+    border-radius: 10px;
+    background-color:white;
+  }
+
+}

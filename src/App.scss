@@ -1,0 +1,28 @@
+@import "./scss/generics/reset";
+@import "./scss/elements/navigation";
+@import "./scss/elements/heroes";
+@import "./scss/elements/singleHero";
+@import "./scss/elements/footer";
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+}
+
+.container {
+  width: 96%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}

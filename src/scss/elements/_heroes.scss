@@ -1,0 +1,15 @@
+.heroes {
+  margin: 3.5em 0;
+  text-align: center;
+
+  h1 {
+    font-size:3em;
+    margin-bottom: 1em;
+  }
+
+  .heroes__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
