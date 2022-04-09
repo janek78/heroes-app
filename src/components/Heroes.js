@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import {getHeroInfo} from "./Requests";
+import {getHeroInfo} from "./API";
 import '../App.scss';
-import {SingleHero} from "./SingleHero";
+import {SingleHero} from './SingleHero';
 
 const heroesId=[644,70,620,149,30,346,720,717,38];
 

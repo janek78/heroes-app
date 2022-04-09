@@ -1,13 +1,21 @@
-@import "./scss/generics/reset";
-@import "./scss/elements/navigation";
-@import "./scss/elements/heroes";
-@import "./scss/elements/singleHero";
-@import "./scss/elements/footer";
+@import './scss/generics/reset';
+@import './scss/elements/navigation';
+@import './scss/elements/heroes';
+@import './scss/elements/singleHero';
+@import './scss/elements/footer';
+@import './scss/elements/search';
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 
 body {
   font-family: 'Comic Neue', cursive;
   font-weight: 700;
+}
+
+.all__content{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .container {
