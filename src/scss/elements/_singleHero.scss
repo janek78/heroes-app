@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 3px 7px rgba(250, 0, 0, 0.25);
+  box-shadow: 0 3px 7px rgba(0, 0, 255, 0.25);
   transition: transform 0.5s ease-in-out;
   background-color: white;
 
@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0 5px 15px rgba(250, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.3);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
@@ -35,6 +35,7 @@
     margin: 10px 0;
     text-align: center;
     font-size: 1.5em;
+    font-weight: bold;
   }
   .single__hero__img {
     position: relative;
@@ -51,27 +52,32 @@
     padding: 15px 0 15px 0;
     text-align: center;
     background-color: white;
+    .single__hero__icon {
+      width: 22px;
+      margin-bottom: 5px;
+    }
+    p{
+      margin:0;
+    }
   }
 }
 
-
-
-
-.single__hero__stats__icon {
-  width: 25px;
-  margin-bottom: 10px;
+@media (min-width:576px) {
+  .single__hero {
+    margin: 1.5em 0;
+    width: 46%;
+  }
 }
 
 @media (min-width: 768px) {
   .single__hero {
-    width: 48%;
-    margin:21px 0 21px 0;
+    width: 42%;
+    margin:1.5em;
   }
 }
 
 @media (min-width: 1200px) {
   .single__hero {
-    width: 31%;
-    cursor: pointer;
+    width: 28%;
   }
 }

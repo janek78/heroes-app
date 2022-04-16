@@ -5,10 +5,13 @@
   flex-wrap: wrap;
 
   .description{
-    padding:0.8em
+    font-size:1.3em;
+    line-height:1.2em;
+    padding:0.2em;
   }
 
   .single__hero {
+    cursor:none;
     &:hover {
       transform: none;
       &:after {
@@ -20,4 +23,10 @@
 
 span{
   font-weight: bold;
+}
+
+@media (min-width:576px){
+  .description{
+    width: 40%;
+  }
 }

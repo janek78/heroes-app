@@ -5,13 +5,11 @@
 @import './scss/elements/footer';
 @import './scss/elements/search';
 @import './scss/elements/detailsHeroes';
-
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
-//https://fonts.googleapis.com/css2?family=Comic+Neue&family=Rubik+Moonrocks&display=swap" rel="stylesheet
-//font-family: 'Rubik Moonrocks', cursive;
+
 body {
   font-family: 'Comic Neue', cursive;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .all__content{
@@ -22,8 +20,14 @@ body {
 }
 
 .container {
-  width: 96%;
+  width: 80%;
   margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 576px;
+  }
 }
 
 @media (min-width: 768px) {
