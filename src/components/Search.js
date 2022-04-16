@@ -1,27 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.scss';
-import {useParams} from "react-router-dom";
-import {SingleHero} from './SingleHero';
-import {getHeroByName} from './API';
+import { useParams } from 'react-router-dom';
+import { SingleHero } from './SingleHero';
+import { getHeroByName } from './API';
 
 export const Search=()=> {
-    const {name} = useParams();
-    const [searchList, setSearchList] = useState([])
+const {name} = useParams();
+const [searchList, setSearchList] = useState(null)
 
     useEffect(() => {
-getHeroByName(name,setSearchList)
+        getHeroByName(name,setSearchList)
     }, [name])
 
-
-    if (searchList.length=== 0) {
+    if (!searchList) {
         return null;
     } else {
 
         return (
             <section className='search'>
-                {/*{console.log(searchList.results)}*/}
-                {searchList.results.map(({name, powerstats, image},i)=><SingleHero  name={name} powerstats={powerstats} image={image.url} key={i}/>)}
+                {searchList.error ? searchList.error : searchList.results.map(({name, powerstats, image,id}) =>
+                    <SingleHero key={id} name={name} powerstats={powerstats} image={image.url} id={id} />)
+                }
             </section>
         );
+
     }
 }

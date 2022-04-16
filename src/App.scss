@@ -4,8 +4,11 @@
 @import './scss/elements/singleHero';
 @import './scss/elements/footer';
 @import './scss/elements/search';
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import './scss/elements/detailsHeroes';
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+//https://fonts.googleapis.com/css2?family=Comic+Neue&family=Rubik+Moonrocks&display=swap" rel="stylesheet
+//font-family: 'Rubik Moonrocks', cursive;
 body {
   font-family: 'Comic Neue', cursive;
   font-weight: 700;

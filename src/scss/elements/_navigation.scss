@@ -22,12 +22,25 @@
     border-radius: 10px;
     margin-right:0.3em;
     background-color:white;
+    cursor:pointer;
+    &::placeholder{
+      color:lightgray;
+    }
+
   }
   button{
-    height: 2.4em;
+    height: 2.3em;
     padding: 5px;
     border-radius: 10px;
-    background-color:white;
+    border:2px solid white;
+    background: transparent;
+    color:white;
+    transition:0.5s;
+    &:hover{
+      background: white;
+      color:black;
+      cursor:pointer;
+    }
   }
 
 }

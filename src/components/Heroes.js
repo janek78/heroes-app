@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from "react";
-import {getHeroInfo} from "./API";
+import React, {useEffect, useState} from 'react';
+import {getHeroInfo} from './API';
 import '../App.scss';
 import {SingleHero} from './SingleHero';
 
 const heroesId=[644,70,620,149,30,346,720,717,38];
 
-
 export const Heroes =()=> {
+const [heroesList,setHeroesList]=useState([]);
+
     useEffect(() => {
         fetchHeroes();
     }, []);
-    const [heroesList,setHeroesList]=useState([]);
 
     const fetchHeroes=async ()=>{
         let heroes=[];
@@ -18,23 +18,18 @@ export const Heroes =()=> {
             const data=await getHeroInfo(heroId);
             heroes.push(data);
         }
-        //console.log(heroes)
         return setHeroesList(heroes);
-
     }
 
     return(
     <section className='heroes'>
         <h1>Most popular heroes</h1>
         <div className='heroes__list'>
-        {heroesList.map(({name, powerstats, image}, i) => {
-            return (
-
-               <SingleHero key={i} name={name} powerstats={powerstats} image={image.url}/>
-
-            )
-        })
-
+            {heroesList.map(({name, powerstats, image,id}) => {
+                return (
+                   <SingleHero key={id} name={name} powerstats={powerstats} image={image.url} id={id}/>
+                )
+            })
         }
         </div>
     </section>

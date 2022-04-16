@@ -1,0 +1,23 @@
+.description__hero{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .description{
+    padding:0.8em
+  }
+
+  .single__hero {
+    &:hover {
+      transform: none;
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+span{
+  font-weight: bold;
+}
