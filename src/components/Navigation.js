@@ -8,13 +8,17 @@ export const Navigation=()=>{
 
     const [ searchValue, setSearchValue ] = useState("");
 
+    const clearInputField = () => {
+        setSearchValue('');
+    };
+
     return (
         <nav className='navigation'>
             <div className='container'>
                 <Link to="/"><img className='navigation__logo' src={logo} alt='Superhero search engine'/></Link>
                 <div className='navigation__search'>
                     <input onChange={event => setSearchValue(event.target.value)} value={searchValue} type='text' name='search' placeholder='Search...'/>
-                    <Link to={`/search/${searchValue}`}><button>Search Hero</button></Link>
+                    <Link to={`/search/${searchValue}`} onClick={clearInputField}><button>Search Hero</button></Link>
                 </div>
             </div>
         </nav>
